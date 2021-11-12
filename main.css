@@ -1,0 +1,146 @@
+body{
+/* background-color: red; */
+   display: grid;
+   row-gap: 1rem;
+   column-gap: 1rem;
+   min-width: 300px;
+   place-items: center;
+
+   font-family: 'Barlow Semi Condensed', sans-serif;
+   /* font-family: 'Red Hat Display', sans-serif; */
+
+   background-color: #f2f2f2;
+}
+.main-container{
+    display: grid;
+    row-gap: 1rem;
+    column-gap: 1rem;
+    height: 100vh;
+    max-width: 1110px;
+    min-width: 300px;
+}
+.bordered{
+    border: 1px solid grey;
+}
+
+.purple-card, .darkgray-card, .white-short-card, .black-card, .white-long-card {
+    min-height: 200px;
+    border-radius: 8px;
+    box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.247378);
+    padding: 40px;
+
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+.purple-card, .darkgray-card, .black-card{
+    background-color: #ffffff;
+    color: #48556A;
+}
+
+
+.purple-card{
+ background: #733FC8 url(his/assets/“.png)  no-repeat 75% 0;
+}
+
+.darkgray-card{
+background-color: #48556a;
+}
+
+.white-short-card, .white-long-card{
+background-color: #ffffff;
+color: grey;
+
+}
+
+.black-card{
+background-color: #19202D;
+}
+
+/*thumbnail widget*/
+.thumbnail-widget{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+}
+.details{
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.photo{
+    width: 28px;
+    height: 28px;
+    border-radius: 100px;
+    margin-right: 15px;
+    margin-top: -20px;
+}
+
+.photo img{
+    width: 28px;
+    height: 28px;
+}
+.client-name{
+    font-size: 13px;
+    font-weight: 500px;
+}
+
+.client-status{
+    font-size: 11px;
+    color: #cfcfcf;
+}
+
+/* Text */
+
+.big-text{
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 900px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.small-text{
+    font-size: 11px;
+    line-height: 18px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.diff-1{
+    color: #b4b4b4;
+}
+
+.diff-2{
+    color: #d3d3d4;
+}
+
+@media all and (min-width: 600px) {
+    .main-container{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "purple-area purple-area darkgray-area white-long-area"
+                             "white-short-area black-area black-area white-long-area";
+    }
+    .purple-card{
+        grid-area: purple-area;
+    }
+
+    .darkgray-card{
+        grid-area: darkgray-area;
+    }
+
+    .white-short-card{
+        grid-area: white-short-area;
+    }
+    .white-long-card{
+        grid-area: white-long-area;
+    }
+    .black-card{
+        grid-area: black-area;
+    } 
+
+}
+
